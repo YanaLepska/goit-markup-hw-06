@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link
       rel="stylesheet"
@@ -57,6 +58,83 @@
             </li>
           </ul>
         </address>
+
+        <button type="button" class="menu-open">
+          <svg class="btn-open-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mob-menu">
+        <div>
+          <button type="button" class="menu-close">
+            <svg class="btn-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black-18dp-2-1-1"></use>
+            </svg>
+          </button>
+
+          <ul class="mob-navigation">
+            <li class="mob-navigation-list-item">
+              <a class="mob-item-nav first-item" href="./index.html">Studio</a>
+            </li>
+            <li class="mob-navigation-list-item">
+              <a class="mob-item-nav" href="">Portfolio</a>
+            </li>
+            <li class="mob-navigation-list-item">
+              <a class="mob-item-nav" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mob-list">
+          <ul class="mob-add-contact">
+            <li>
+              <a class="mob-item-add" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li>
+              <a class="mob-item-add" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mob-social-link-icon-list">
+            <li class="mob-icon-list-item">
+              <a class="mob-icon-item" href="">
+                <svg class="mob-icon-two" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="mob-icon-list-item">
+              <a class="mob-icon-item" href="">
+                <svg class="mob-icon-two" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="mob-icon-list-item">
+              <a class="mob-icon-item" href="">
+                <svg class="mob-icon-two" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="mob-icon-list-item">
+              <a class="mob-icon-item" href="">
+                <svg class="mob-icon-two" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -66,7 +144,10 @@
       <!-- Button -->
       <section class="hero-img section">
         <div class="container">
-          <h1 class="main-title">Effective Solutions for Your Business</h1>
+          <h1 class="main-title">
+            Effective Solutions <br />
+            for Your Business
+          </h1>
           <button class="button" type="button">Order Service</button>
         </div>
       </section>
@@ -85,8 +166,8 @@
               </div>
               <h3 class="feature-title">Strategy</h3>
               <p class="features-text">
-                Our goal is to identify the business problem to walk away with
-                the perfect and creative solution.
+                Our goal is to identify the business <br />
+                problem to walk away with the perfect and creative solution.
               </p>
             </li>
             <li class="feature-list-item">
@@ -139,6 +220,7 @@
               <!-- TeamCard-1 -->
 
               <img
+                srcset="./images/img.jpg 1x, ./images/img_2x.jpg 2x"
                 src="./images/img.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -190,6 +272,7 @@
               <!-- TeamCard-2 -->
 
               <img
+                srcset="./images/img_1.jpg 1x, ./images/img_1_2x.jpg 2x"
                 src="./images/img_1.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -241,6 +324,7 @@
               <!-- TeamCard-3 -->
 
               <img
+                srcset="./images/img_2.jpg 1x, ./images/img_2_2x.jpg 2x"
                 src="./images/img_2.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -292,6 +376,7 @@
               <!-- TeamCard-4 -->
 
               <img
+                srcset="./images/img_3.jpg 1x, ./images/img_3_2x.jpg 2x"
                 src="./images/img_3.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -351,12 +436,34 @@
           <ul class="portfolio-list">
             <li class="project-card">
               <div class="box">
-                <img
-                  src="./images/img-1.jpg"
-                  alt="Banking App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-1.jpg 1x, ./images/img-1-2x.jpg 2x"
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-1-tab.jpg    1x,
+                      ./images/img-1-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/img-1-mob.jpg    1x,
+                      ./images/img-1-mob-2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+
+                  <img
+                    src="./images/img-1.jpg"
+                    alt="Banking App"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -373,12 +480,33 @@
             </li>
             <li class="project-card">
               <div class="box">
-                <img
-                  src="./images/img-2.jpg"
-                  alt="Cashless Payment"
-                  width="360"
-                  height="300"
-                />
+                <picture
+                  ><source
+                    srcset="./images/img-2.jpg 1x, ./images/img-2-2x.jpg 2x"
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-2-tab.jpg    1x,
+                      ./images/img-2-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/img-2-mob.jpg    1x,
+                      ./images/img-2-mob-2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    src="./images/img-2.jpg"
+                    alt="Cashless Payment"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -395,12 +523,33 @@
             </li>
             <li class="project-card">
               <div class="box">
-                <img
-                  src="./images/img-3.jpg"
-                  alt="Meditaion App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-3.jpg 1x, ./images/img-3-2x.jpg 2x"
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-3-tab.jpg    1x,
+                      ./images/img-3-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/img-3-mob.jpg    1x,
+                      ./images/img-3-mob-2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    src="./images/img-3.jpg"
+                    alt="Meditaion App"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -417,12 +566,33 @@
             </li>
             <li class="project-card">
               <div class="box">
-                <img
-                  src="./images/img-4.jpg"
-                  alt="Taxi Service"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-4.jpg 1x, ./images/img-4-2x.jpg 2x"
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-4-tab.jpg    1x,
+                      ./images/img-4-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/img-4-mob.jpg    1x,
+                      ./images/img-4-mob-2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    src="./images/img-4.jpg"
+                    alt="Taxi Service"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -439,12 +609,33 @@
             </li>
             <li class="project-card">
               <div class="box">
-                <img
-                  src="./images/img-5.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-5.jpg 1x, ./images/img-5-2x.jpg 2x"
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-5-tab.jpg    1x,
+                      ./images/img-5-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/img-5-mob.jpg    1x,
+                      ./images/img-5-mob-2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    src="./images/img-5.jpg"
+                    alt="Screen Illustrations"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -461,12 +652,33 @@
             </li>
             <li class="project-card">
               <div class="box">
-                <img
-                  src="./images/img-6.jpg"
-                  alt="Online Courses"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img-6.jpg 1x, ./images/img-6-2x.jpg 2x"
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-6-tab.jpg    1x,
+                      ./images/img-6-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/img-6-mob.jpg    1x,
+                      ./images/img-6-mob-2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    src="./images/img-6.jpg"
+                    alt="Online Courses"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -565,7 +777,7 @@
     </footer>
 
     <!-- MODAL -->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button class="btn-close" type="button">
           <svg class="btn-close-icon" width="8" height="8">
