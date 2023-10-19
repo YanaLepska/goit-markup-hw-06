@@ -1178,7 +1178,7 @@ img {
   }
 
   .feature-icon {
-    padding: 24px 100px;
+    /* padding: 24px 100px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1186,7 +1186,7 @@ img {
     border: 1px solid #8e8f99;
     background: #f4f4fd;
     margin-bottom: 8px;
-    max-width: 264px;
+    /* max-width: 264px; */
     height: 112px;
   }
   .feature-list-item {
