@@ -379,7 +379,7 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
 }
 
 .team-title {
@@ -553,7 +553,7 @@ img {
 }
 
 .footer-one {
-  margin-right: 120px;
+  margin-right: 24px;
 }
 
 .footer-two {
@@ -959,13 +959,13 @@ img {
     flex-basis: calc((100% - 24px) / 2);
   }
   .feature-list {
-    width: 736px;
+    min-width: 736px;
   }
 
   .footer {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 0;
     padding-left: 104px;
   }
 
@@ -1066,12 +1066,13 @@ img {
     margin-bottom: 36px;
   }
 
-  .feature-list-item {
-    width: 356px;
-  }
-
   .feature-list {
     gap: 72px 24px;
+  }
+
+  .feature-list-item {
+    /* width: 356px; */
+    flex-basis: calc((100% - 24px) / 2);
   }
 
   .feature-title {
@@ -1195,6 +1196,7 @@ img {
   .feature-list {
     flex-wrap: nowrap;
     gap: 24px;
+    width: 1128px;
   }
 
   .feature-title {
@@ -1262,6 +1264,9 @@ img {
     width: 264px;
   }
 
+  .footer-one {
+    margin-right: 120px;
+  }
   /* .modal-footer {
     flex-direction: row;
   }
