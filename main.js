@@ -5,6 +5,7 @@ const form = document.querySelector('.modal-form');
 const mobileMenu = document.querySelector('.mob-menu');
 const menuOpen = document.querySelector('.menu-open');
 const menuClose = document.querySelector('.menu-close');
+const menuNav = document.querySelector('.mob-navigation');
 
 menuOpen.addEventListener("click", onMenuOpen);
 orderBtn.addEventListener('click', handleModal);
@@ -12,9 +13,12 @@ form.addEventListener('submit', onFormSubmit);
 
 function onMenuOpen() {
     mobileMenu.classList.add('is-open');
-    menuClose.addEventListener("click", () => {
-          mobileMenu.classList.remove('is-open')
-      })
+  menuClose.addEventListener("click", () => {
+    mobileMenu.classList.remove('is-open')
+  });
+  menuNav.addEventListener("click", () => {
+    mobileMenu.classList.remove('is-open')
+  });
 }
 
 function handleModal(e) {
